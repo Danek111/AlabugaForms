@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <section class="appointment">
+        <div class="container">
+            <form action="order" method="POST" class="form">
+                {% csrf_token %}
+                <h2 class="title__form">Make an appointment</h2>
+                {{form}}
+            </form>
+        </div>
+        <div class="container2">
+            <div class="text__cont">
+                <p class="p__cont1">Maxime placeat facere <br>possimus omnis</p>
+                <p class="p__cont2">17k</p>
+                <p class="p__cont3">customers served (and counting)</p>
+                <p class="data">{{ data }}</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> User form </h2>
+    <!-- <form method='post' action="postuser/">
+        
+        <p>Name: <input name='name' /></p>
+        <p>Age: <input type="number" name='age' /></p>
+        <p>
+            languages: <br />
+            <input name="languages" type="text" /><br />
+            <input name="languages" type="text" /><br />
+            <input name="languages" type="text" /><br />
+            <select multiple name="languages" id="languages">
+                <option>python</option>
+                <option>Java</option>
+                <option>C#</option>
+                <option>C++</option>
+                <option>JavaScript</option>
+            </select>
+        </p>
+        
+    </form> -->
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{form}}
+        </table>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>

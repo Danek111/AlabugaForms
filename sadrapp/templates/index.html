@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Django 4_1</title>
+</head>
+<body>
+    
+    <section class="appointment">
+        <div class="container">
+            <form action="appointment" method="POST" class="form">
+                {% csrf_token %}
+                <h2 class="title__form">Make an appointment</h2>
+                <div class="input1">
+                    <input type="text" placeholder="Name" name="name"  class="input v12">
+                    <input type="text" placeholder="Email" name="email" class="input v11">
+                </div>
+                <div class="input2">
+                    <input type="text" placeholder="Phone Number" id="" name="phone" class="input v12">
+                    <input type="text" placeholder="Select Service" id="" name="service" class="input v11">
+                </div>
+                <div class="input3">
+                    <input type="text" name="other" placeholder="Tell us about the car needing service(s)" id="inputService" class="big__input">
+                </div>
+                <div class="btn__form">
+                    <button type="submit" class="btnForm"><p class="text__btn">MAKE AN APPOINTMENT</p><img src="static/img/but_ar.png" alt="" class="btn__ar"></button>
+                </div>
+            </form>
+        </div>
+        <div class="container2">
+            <div class="text__cont">
+                <p class="p__cont1">Maxime placeat facere <br>possimus omnis</p>
+                <p class="p__cont2">17k</p>
+                <p class="p__cont3">customers served (and counting)</p>
+                <p class="data">{{ data }}</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
